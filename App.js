@@ -2,6 +2,16 @@ import React from "react";
 import TodoMap from "./TodoMap";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Image } from "react-native";
+// import { NavigationContainer } from "react-navigation"
+// import Ionicons from 'react-native-vector-icons/Ionicons';
+// import Icon from 'react-native-vector-icons/FontAwesome';
+// import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+const HomeIcon = "/home/etech/assigments/new/myapp/assets/iconHome.png";
+const CheckedIcon = "/home/etech/assigments/new/myapp/assets/icons8-checked-64.png";
+const UncheckedIcon = "/home/etech/assigments/new/myapp/assets/iconUnchecked.png";
+const color = "blue"
 
 const Tab = createBottomTabNavigator();
 
@@ -26,8 +36,10 @@ function App() {
     setData(data);
   };
 
+  const dataLength = data.length
+
   return (
-    <NavigationContainer>
+    <NavigationContainer >
       <Tab.Navigator>
         <Tab.Screen
           name="Home"
@@ -39,6 +51,34 @@ function App() {
               handleData={handleData}
             />
           )}
+          options={{
+            tabBarActiveTintColor: "green",
+            headerShown: true,
+            tabBarBadge: dataLength,
+            tabBarLabel: undefined,
+            tabBarLabelStyle: {
+              // fontSize: verticalScale(10),
+              // ...defaultStyles.textMedium,
+              letterSpacing: 0.5,
+              lineHeight: 16,
+              marginBottom: 4,
+            },
+
+            tabBarIcon: ({color, size}) => (
+              <Image
+                source={HomeIcon}
+                style={{
+                  width: 20,
+                  height: 20,
+                  tintColor: color,
+                  marginBottom: -5,
+                }}
+              />
+            ),
+          }}
+
+
+
         />
         <Tab.Screen
           name="checked"
@@ -51,7 +91,39 @@ function App() {
               filter={"checked"}
             />
           )}
+          options={{
+            tabBarActiveTintColor: "green",
+            headerShown: true,
+            tabBarBadge: dataLength,
+            tabBarLabel: undefined,
+            tabBarLabelStyle: {
+              // fontSize: verticalScale(10),
+              // ...defaultStyles.textMedium,
+              letterSpacing: 0.5,
+              lineHeight: 16,
+              marginBottom: 4,
+            },
+
+            tabBarIcon: ({color, size}) => (
+              <Image
+                source={HomeIcon}
+                style={{
+                  width: 20,
+                  height: 20,
+                  tintColor: color,
+                  marginBottom: -5,
+                }}
+              />
+            ),
+          }}
+
+
+
+
+
         />
+
+
         <Tab.Screen
           name="unchecked"
           component={() => (
@@ -63,12 +135,71 @@ function App() {
               filter={"unchecked"}
             />
           )}
+
+
+          options={{
+            tabBarActiveTintColor: "green",
+            headerShown: true,
+            tabBarBadge: dataLength,
+            tabBarLabel: undefined,
+            tabBarLabelStyle: {
+              // fontSize: verticalScale(10),
+              // ...defaultStyles.textMedium,
+              letterSpacing: 0.5,
+              lineHeight: 16,
+              marginBottom: 4,
+            },
+
+            tabBarIcon: ({color, size}) => (
+              <Image
+                source={HomeIcon}
+                style={{
+                  width: 20,
+                  height: 20,
+                  tintColor: color,
+                  marginBottom: -5,
+                }}
+              />
+            ),
+          }}
+
         />
-        {/* <Tab.Screen name = "checkedTodo" component={Chekedbox} />
-        <Tab.Screen name = "UncheckedTodo" component={Unchekedbox} /> */}
       </Tab.Navigator>
     </NavigationContainer>
   );
 }
 
 export default App;
+
+
+
+
+{/* <Tab.Screen
+          name={SCREENS_NAME.SHOP}
+          component={SCREENS.SHOP}
+          options={{
+            tabBarActiveTintColor: colors.secondary,
+            headerShown: false,
+            tabBarBadge: pendingOrderCount,
+            tabBarLabel: I18n.t('STORE'),
+            tabBarLabelStyle: {
+              fontSize: verticalScale(10),
+              ...defaultStyles.textMedium,
+              letterSpacing: 0.28,
+              lineHeight: 16,
+              marginBottom: 4,
+            },
+
+            tabBarIcon: ({color, size}) => (
+              <Image
+                source={shopIcon}
+                style={{
+                  width: 20,
+                  height: 20,
+                  tintColor: color,
+                  marginBottom: -5,
+                }}
+              />
+            ),
+          }}
+        /> */}

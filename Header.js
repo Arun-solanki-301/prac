@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const MyIcon = () => {return <Icon name="trash" size={30} color="#006CFF" style={{}}/>};
 
-const Header = ({ handleShowForm, showForm , deleteSelected , setnewTodo ,todo , delBtn , setDelBtn}) => {
+const Header = ({ handleShowForm, showForm , deleteSelected , setnewTodo ,todo , delBtn , setDelBtn , filter}) => {
     let newArr = Object.assign([], todo);
     const getitems = deleteSelected();
 
@@ -21,8 +21,8 @@ const Header = ({ handleShowForm, showForm , deleteSelected , setnewTodo ,todo ,
         <View style={Styles.TodoContent}>
             <Text style={Styles.today}>Today</Text>
             <View style = {{display : "flex", flexDirection: "row"}}>
-            {delBtn?<TouchableOpacity style={Styles.button} onPress={getdeleted}><Text style={Styles.buttontext, {marginLeft : 9, marginTop:9}}> <MyIcon /></Text></TouchableOpacity>:<View />}
-                <TouchableOpacity onPress={handleShowForm} style={Styles.button}><Text style={Styles.buttonText}>{showForm ? " - " : " + "}</Text></TouchableOpacity>
+            {delBtn?<TouchableOpacity style={Styles.button} onPress={getdeleted}><Text style={Styles.buttontext, {marginLeft : 12, marginTop:9}}><MyIcon /></Text></TouchableOpacity>:<View />}
+            <TouchableOpacity onPress={handleShowForm} style={Styles.button}><Text style={Styles.buttonText}>{showForm ? " - " : " + "}</Text></TouchableOpacity>
             </View>
         </View>
     )}

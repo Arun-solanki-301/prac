@@ -22,7 +22,7 @@ const TodoComp = ({ name, checking }) => {
         <TouchableOpacity
           style={name.checked ? Styles.IsActivebtn : Styles.IsnotActivebtn}
         >
-          <Text style={Styles.IsActivebtnText}></Text>
+          <Text></Text>
         </TouchableOpacity>
       </View>
     </View>

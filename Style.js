@@ -7,7 +7,7 @@ const Styles = StyleSheet.create({
     marginTop: 52,
     display: "flex",
     flexDirection: "row",
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
   },
   button: {
     color: "blue",
@@ -17,14 +17,13 @@ const Styles = StyleSheet.create({
     height: 50,
     borderRadius: 50,
     textAlign: "center",
-    marginRight : 8
-
+    marginRight: 8,
   },
   buttonText: {
     marginTop: -4,
     fontSize: 40,
     marginLeft: 4,
-    color: "#006CFF"
+    color: "#006CFF",
   },
 
   buttonicon: {
@@ -42,26 +41,26 @@ const Styles = StyleSheet.create({
     borderColor: "grey",
     borderRadius: 99999,
     paddingHorizontal: 10,
-    backgroundColor: "blue"
+    backgroundColor: "blue",
   },
   TodoText: {
     fontSize: 18,
     marginHorizontal: 12,
-    width: "80%"
+    width: "80%",
   },
   today: {
     fontSize: 36,
-    paddingLeft :10
+    paddingLeft: 10,
   },
   Todolist: {
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "row",
     marginVertical: 20,
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
   },
   TodoListItems: {
-    display: "flex"
+    display: "flex",
   },
   IsActivebtn: {
     width: 25,
@@ -71,9 +70,8 @@ const Styles = StyleSheet.create({
     borderRadius: 99999,
     paddingHorizontal: 10,
     backgroundColor: "green",
-
   },
-  IsnotActivebtn :{
+  IsnotActivebtn: {
     width: 25,
     height: 25,
     borderWidth: 1,
@@ -89,10 +87,9 @@ const Styles = StyleSheet.create({
     paddingLeft: 10,
     borderRadius: 10,
     // paddingTop: 10
-
   },
   InputTextHead: {
-    fontSize: 35
+    fontSize: 35,
   },
   InputCompMain: {
     borderWidth: 1,
@@ -106,9 +103,9 @@ const Styles = StyleSheet.create({
     zIndex: 999999,
     width: "90%",
     backgroundColor: "white",
-    marginTop :100
+    marginTop: 100,
     // height: 800
-    
+
     // position : "absolute",
     // top : "30%",
     // left : "40%",
@@ -120,17 +117,41 @@ const Styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    marginVertical: 10
+    marginVertical: 10,
   },
   InputTodoBtnText: {
     fontSize: 20,
-    color: "blue"
+    color: "blue",
   },
   InputTodoBtn: {
     color: "blue",
-    fontSize: 20
-  }
-})
+    fontSize: 20,
+  },
+  LoginInput: {
+    borderColor: "aqua",
+    borderWidth: 2,
+    backgroundColor: "#fff",
+    paddingHorizontal: 15,
+    paddingVertical: 5,
+    margin: 10,
+    shadowColor: "aqua",
+    borderRadius:8
+    // shadowOffset: "2",
+  },
+  Loginbtn:{
+    backgroundColor : "aqua",
+    fontSize : 10,
+    width : 80,
+    borderRadius : 8,
+    height : 50,
+    color : '#fff'
+    
 
+  },
+  LoginbtnText : {
+    fontSize : 25,
+    textAlign:"center"
+  }
+});
 
 export default Styles;

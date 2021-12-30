@@ -7,5 +7,9 @@
       "**/*"
     ]
   },
-  "name": "myapp"
+  "name": "myapp",
+  "android": {
+    "package": "example.expo.googlesignin",
+    "googleServicesFile": "./google-services.json"
+  }
 }

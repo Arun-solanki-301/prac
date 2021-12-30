@@ -3,10 +3,12 @@ import TodoComp from "./TodoComp";
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 import Styles from "./Style";
 import Header from "./Header";
+import Google from "./GoogleSign"
+
+
 
 const TodoMap = ({ showForm, handleShowForm, data, handleData, filter }) => {
-  // arr, idCount, setidCount, text, settext, newTodo, setnewTodo, delBtn, setDelBtn, obj
-  // handle id count by idcount state
+  
   const [idCount, setidCount] = useState(data[data?.length - 1].id + 1);
   const [text, settext] = useState("");
   const [newTodo, setnewTodo] = useState(data);
@@ -76,7 +78,12 @@ const TodoMap = ({ showForm, handleShowForm, data, handleData, filter }) => {
   // handleData(newTodo);
 
   return (
+
+
+
     <View style={{ minHeight: 800 }}>
+    
+
       <View>
         <Header
           showForm={showForm}
@@ -86,7 +93,10 @@ const TodoMap = ({ showForm, handleShowForm, data, handleData, filter }) => {
           todo={data}
           delBtn={delBtn}
           setDelBtn={setDelBtn}
+          
         />
+        <Google />
+
         {data
           .filter((val) =>
             filter === "checked"
@@ -137,3 +147,5 @@ const TodoMap = ({ showForm, handleShowForm, data, handleData, filter }) => {
 };
 
 export default TodoMap;
+// arr, idCount, setidCount, text, settext, newTodo, setnewTodo, delBtn, setDelBtn, obj
+  // handle id count by idcount state
